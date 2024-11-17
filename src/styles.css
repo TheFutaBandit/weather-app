@@ -83,11 +83,24 @@
     display: grid;
     grid-template-columns: 1fr 1.6fr 1fr;
     grid-auto-flow: column;
+    gap: 4px;
     /* padding: 4px; */
   }
 
   .header-body > * {
     border: 1px solid red;
+  }
+
+  .icon-tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .icon-tile img{
+    /* border: 1px solid salmon; */
+    max-height: 110px;
+    max-width: 110px;
   }
 
   .description-tile {
@@ -138,10 +151,26 @@
   .tile-body {
     border: 1px solid blue;
     display: grid;
+    /* grid-auto-columns: 50px; */
     grid-auto-flow: column;
-    grid-auto-columns: repeat(auto-fill, minmax(40px, 1fr));
+    gap: 2px;
+    grid-template-columns: 50px;
+    /* grid-auto-columns: repeat(auto-fit, minmax(50px, 100px)); */
   }
 
   .tile-body > * {
     border: 1px solid green;
+  }
+
+  .tile-body .weather-tile {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .weather-tile > * {
+    border: 1px solid red;
+  }
+
+  .weather-tile .tile {
+    font-family: 'Eina02-SemiBold';
   }
