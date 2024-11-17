@@ -1,0 +1,140 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  * {
+    margin: 0;
+  }
+  
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  @font-face {
+    font-family: 'EinaRegular';
+    src: url('fonts/Eina-Font/Eina/Eina02-Regular.ttf');
+  }
+
+  @font-face {
+    font-family: 'EinaThin';
+    src: url('fonts/Eina-Font/Eina/Eina02-Light.ttf');
+  }
+
+  @font-face {
+    font-family: 'Eina02-SemiBold';
+    src: url('fonts/Eina-Font/Eina/Eina01-SemiBold.ttf');
+  }
+
+  :root {
+    --square-dimension: 450px;
+    font-family: 'EinaRegular';
+  }
+
+  html {
+    height: 100vh;
+  }
+
+  body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    border: 1px solid black;
+    min-height: 250px;
+    min-width: var(--square-dimension);
+    display: grid;
+    grid-template-rows: 1fr 95px;
+    padding: 8px;
+    gap: 8px;
+  }
+
+  .header-body {
+    border: 1px solid blue;
+    display: grid;
+    grid-template-columns: 1fr 1.6fr 1fr;
+    grid-auto-flow: column;
+    /* padding: 4px; */
+  }
+
+  .header-body > * {
+    border: 1px solid red;
+  }
+
+  .description-tile {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-family: 'Eina02-SemiBold';
+      /* align-items: center; */
+  }
+
+  .description-tile > * {
+    border: 1px solid green;
+  }
+
+  .description-tile .location {
+    font-family: 'Eina02-SemiBold';
+  }
+
+  .description-tile .status {
+    
+  }
+
+  .description-tile .time {
+    
+  }
+
+  .temperature-tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .temperature-tile .temperature {
+    font-family: 'EinaThin';
+    /* font-family: 'Roboto'; */
+    font-size: 45px;
+  }
+
+  .temperature:after {
+    content: "\00b0";
+  }
+
+  .tile-body {
+    border: 1px solid blue;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: repeat(auto-fill, minmax(40px, 1fr));
+  }
+
+  .tile-body > * {
+    border: 1px solid green;
+  }
