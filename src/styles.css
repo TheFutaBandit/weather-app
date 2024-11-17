@@ -26,6 +26,8 @@
   
   p {
     text-wrap: pretty;
+    padding: 0px;
+    margin: 0px;
   }
   h1, h2, h3, h4, h5, h6 {
     text-wrap: balance;
@@ -93,23 +95,27 @@
       flex-direction: column;
       justify-content: center;
       font-family: 'Eina02-SemiBold';
+      padding-left: 10px;
       /* align-items: center; */
   }
 
-  .description-tile > * {
-    border: 1px solid green;
+  .description-tile > p {
+    line-height: 1.2;
+    /* border: 1px solid green; */
   }
 
   .description-tile .location {
     font-family: 'Eina02-SemiBold';
+    font-size: 25px;
   }
 
   .description-tile .status {
-    
+    font-size: 18px;
+    color: grey;
   }
 
   .description-tile .time {
-    
+    font-size: 20px;
   }
 
   .temperature-tile {
@@ -126,6 +132,7 @@
 
   .temperature:after {
     content: "\00b0";
+    /* font-size: 40px;; */
   }
 
   .tile-body {
