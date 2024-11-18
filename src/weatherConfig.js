@@ -33,6 +33,10 @@ export const weather_extraction = async (location) => {
         return current_condition.icon;
     }
 
+    const day_array = () => {
+        return weather_data.days;
+    }
+
     return {
         weather_current,
         temperature_current,
@@ -40,7 +44,8 @@ export const weather_extraction = async (location) => {
         address_current,
         condition_current,
         time_current,
-        icon_current
+        icon_current,
+        day_array
     }
 
 }

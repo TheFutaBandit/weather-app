@@ -1,5 +1,5 @@
 node_modules
 dist
-src/fonts
-src/WeatherIcons-PNG
-src/animated
+src/fonts/
+src/WeatherIcons-PNG/
+src/animated/
