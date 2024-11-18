@@ -149,13 +149,14 @@
   }
 
   .tile-body {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     display: grid;
     /* grid-auto-columns: 50px; */
     grid-auto-flow: column;
-    gap: 2px;
-    grid-template-columns: 50px;
-    /* grid-auto-columns: repeat(auto-fit, minmax(50px, 100px)); */
+    gap: 5px;
+    /* grid-template-columns: 50px; */
+    /* grid-auto-columns: 50px; */
+    grid-auto-columns: repeat(auto-fit, minmax(50px, 100px));
   }
 
   .tile-body > * {
@@ -165,12 +166,35 @@
   .tile-body .weather-tile {
     display: flex;
     flex-direction: column;
+    padding: 1px;
+    justify-content: center;
   }
 
   .weather-tile > * {
-    border: 1px solid red;
+    /* border: 1px solid red; */
   }
 
   .weather-tile .tile {
     font-family: 'Eina02-SemiBold';
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    max-height: inherit;
+  }
+
+  .tile.icon {
+    /* max-height: 50px; */
+    /* max-width: 50px; */
+    display: flex;
+    /* justify-self: center; */
+  }
+
+  .tile.icon img {
+    /* justify-self: center; */
+    max-height: 50px;
+    max-width: 50px;
+  }
+
+  .weather-tile .tile.temp:after {
+    content: "\00b0";
   }
