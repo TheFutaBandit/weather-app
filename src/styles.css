@@ -154,7 +154,7 @@
     /* grid-auto-columns: 50px; */
     grid-auto-flow: column;
     gap: 5px;
-    /* grid-template-columns: 50px; */
+    /* grid-template-columns: repeat(6,60px); */
     /* grid-auto-columns: 50px; */
     grid-auto-columns: repeat(auto-fit, minmax(50px, 100px));
   }
