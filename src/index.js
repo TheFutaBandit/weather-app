@@ -7,6 +7,7 @@ import {weather_extraction} from "./weatherConfig.js";
 
 const weather_application = async (location) => {
     let data = await weather_extraction(location);
+    console.log(data);
 
     let toggleTemp = (temp) => {
         return (((temp - 32) * 5)/9).toFixed(1);
@@ -37,8 +38,6 @@ const weather_application = async (location) => {
     
         const tile_icon = document.createElement("div");
         tile_icon.className = "tile icon";
-        
-        console.log(icon);
     
         const img_icon = document.createElement("img");
         img_icon.src = clearDay;
@@ -68,7 +67,6 @@ const weather_application = async (location) => {
             let df = weather_array[i];
             makeWeatherTile(df.icon,toggleTemp(df.temp),df.datetime.slice(0,5));
         }
-        console.log(weather_array[0]);
     })();
 
     const current_temperature_control = (() => {
@@ -90,10 +88,9 @@ const weather_application = async (location) => {
         const time = document.querySelector(".time");
         time.textContent = data.time_current();
     })();
-
 }
 
-let boot_up = weather_application("Vietnam");
+let boot_up = weather_application("New Delhi");
 boot_up;
 
 const user_input = (() => {

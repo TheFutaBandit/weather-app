@@ -1,9 +1,22 @@
+const show_loading = () => {
+    const loading_bar = document.querySelector("#loading");
+    loading_bar.classList.add("display");
+    console.log("loading starts");
+}
+
+const hide_loading = () => {
+    const loading_bar = document.querySelector("#loading");
+    loading_bar.classList.remove("display");
+    console.log("loading stops");
+}
+
 export const weather_extraction = async (location) => {
+    show_loading();
     let weather_data_object = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?key=DCZD5EQRWC7NRZQN93UXQFWFA`)
+    hide_loading();
     let weather_data = await weather_data_object.json();
     let current_condition = weather_data.currentConditions;
     // console.log(current_condition);
-    console.log(weather_data);
 
     const data_current = () => {
         console.log(weather_data);
